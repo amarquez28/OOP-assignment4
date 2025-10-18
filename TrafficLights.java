@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TrafficLights {
     public static void main(String[] args) {
         Node s1 = new Node('R','R');
@@ -12,6 +14,18 @@ public class TrafficLights {
         TrafficStateLL.insertNode(s4);
         TrafficStateLL.insertNode(s5);
         TrafficStateLL.insertNode(s6);
-        TrafficStateLL.printLL();
+        Scanner input = new Scanner(System.in);
+        while (true) {
+            System.out.print("Light: ");
+            TrafficStateLL.currState.printNodeInfo();
+            System.out.println("Please press enter to transition to the next state ");
+            String line = input.nextLine();
+            if(line.equals("")){
+                TrafficStateLL.advanceState(); 
+            }
+            else{
+                System.out.println("I SAID PRESS ENTER");
+            }
+        }
     }    
 }

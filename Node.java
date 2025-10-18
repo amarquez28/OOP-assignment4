@@ -54,10 +54,7 @@ public class Node {
     }
 
     public void printNodeInfo(){
-        System.out.println("NS: "+this.NS);
-        System.out.println("EW: "+this.EW);
+        System.out.println("NS: "+this.NS+" EW: "+this.EW);
     }
-    
-
 }
 
